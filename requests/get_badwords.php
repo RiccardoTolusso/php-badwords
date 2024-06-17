@@ -43,9 +43,9 @@ for ($i = 0; $i < count($badwords); $i++) {
                 </div>
             </div>
             <div id="display-result" class="d-none">
-                <h2 class="display-1 fw-semibold py-5">La tua frase è pronta</h2>
-                <p class="fs-2"><?php echo $output_text ?></p>
-
+                <h2 class="display-1 fw-semibold pt-5">La tua frase è pronta</h2>
+                <p class="fs-2 py-5"><?php echo $output_text ?></p>
+                <a href="<?php echo $_GET['current_url'] ?>" class="btn btn-primary">Genera una nuova frase</a>
             </div>
         </div>
     </div>

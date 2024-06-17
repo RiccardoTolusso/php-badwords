@@ -1,3 +1,7 @@
+<?php
+$current_url = $_SERVER['REQUEST_URI'];
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -20,6 +24,8 @@
                 <h5 class="display-6">Free Online Bad Words Parsers</h5>
             </div>
             <form action="./requests/get_badwords.php" method="get" class="py-4">
+                <input type="hidden" value="<?php echo $current_url ?>" name="current_url">
+
                 <div class="form-floating mb-4">
                     <textarea name="text" id="text" class="form-control" placeholder="Inserisci il testo" required></textarea>
                     <label for="text">Inserisci qui il tuo testo</label>
