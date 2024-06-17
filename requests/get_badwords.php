@@ -12,6 +12,7 @@ if (str_contains($badwords, " ")) {
 }
 
 
+
 for ($i = 0; $i < count($badwords); $i++) {
     $output_text = str_replace($badwords[$i], "***", $output_text);
 }
