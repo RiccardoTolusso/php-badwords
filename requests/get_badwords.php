@@ -3,7 +3,19 @@
 $text = $_GET['text'];
 $badwords = $_GET['badwords'];
 
-$output_text = str_replace($badwords, "***", $text);
+$output_text = $text;
+
+if (str_contains($badwords, " ")) {
+    $badwords = explode(" ", $badwords);
+} else {
+    $badwords = [$badwords];
+}
+
+
+for ($i = 0; $i < count($badwords); $i++) {
+    $output_text = str_replace($badwords[$i], "***", $output_text);
+}
+
 
 ?>
 
